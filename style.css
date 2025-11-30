@@ -1,0 +1,230 @@
+* {                                                                                 
+  box-sizing: border-box; /* para stable layout sa mobile */
+}
+
+                                              
+
+.lead  {
+  font-family: 'BR Sonoma', sans-serif;
+  text-align: justify; 
+  padding-left: 2%;                                              
+}
+
+body{
+  padding-bottom: 5%;
+}
+
+.navbar{
+  text-align: end;                                             
+}
+
+.hero {
+  height: 100vh;
+  background:  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+  url('bg.jpg') no-repeat center center;
+  background-size: cover; /* para ma-stretch or fit sa screen ang image */
+  position: relative;
+}
+
+.front{
+  border: 10px;
+  color: aliceblue;
+  font-size: 800%;
+  padding: 10px;
+  text-shadow: 12px 14px 7px rgb(20, 20, 20);
+}
+
+.navbar {
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.74);
+  transition: top 0.4s;
+}
+
+.lead{
+  color: rgb(255, 255, 255);
+  font-size: x-large;
+}
+
+.service-card{
+  text-shadow: 1px 11px 10px rgba(0, 0, 0, 0.658);
+  color: rgb(46, 46, 46);
+}
+
+/* ✅ Para makita ang hamburger icon sa dark background */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  animation: fadeIn 2s ease;
+  box-shadow: 0 0 40px rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.btn-gold {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 90px;
+  padding: 10px 40px;
+  padding-bottom: 10px;
+  transition: 0.2s;
+  box-shadow: 0 0 20px rgb(100, 100, 100);
+}
+
+.btn-gold:hover {
+  background-color: rgba(24, 23, 23, 0.61);
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(206, 206, 206, 0.637);
+}
+
+.service-card {
+  background: linear-gradient( rgba(0, 0, 0, 0.7)); 
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Konkhmer Sleokchher', sans-serif;                                            
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 10px 9px 10px rgba(34, 34, 34, 0.705);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.book .container{
+  text-align: center;
+}
+
+.card-img {
+  height: 130px; /* card top height */
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 0px;  /* match your card radius */
+  border-top-right-radius: 0px;
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  font-family: 'Begika', sans-serif;
+}
+
+.footer .social-links {
+  margin-top: 10px;
+  justify-items: center;
+  align-items: center;
+  gap: 15px;
+  display: flex;
+}
+
+.social-icon {
+  color: #000000;
+  font-size: 34px;
+  margin: 0 10px;
+  transition: 0.3s;
+  padding: 12px;
+}
+
+.social-icon:hover {
+  color: rgb(92, 92, 92); /* pwede nimo usbon depende sa theme */
+  transform: scale(1.2);
+}
+
+/* =============================
+   RESPONSIVENESS ADDITIONS
+   ============================= */
+
+/* Navbar responsiveness */
+@media (max-width: 768px) {
+  .navbar .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* Hero section responsiveness */
+.hero {
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .btn-gold {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Footer responsiveness */
+@media (max-width: 576px) {
+  .footer .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .social-links a {
+    margin: 5px 0;
+  }
+}
+
+/* Modal responsiveness */
+.modal-dialog {
+  max-width: 95%;
+  margin: 1.75rem auto;
+}
+
+/* Form & button adjustments */
+form .form-control,
+form .form-control-file,
+form .btn {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  form .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+/* Fix navbar alignment on mobile */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: right !important; /* align items to the right */
+    width: 100%; /* ensure it fills the collapsed menu */
+  }
+  .navbar-nav .nav-item {
+    justify-content: flex-end; /* align links to right inside flex container */
+  }
+  .navbar-nav .nav-link {
+    text-align: right !important; /* links aligned right */
+  }
+}
+

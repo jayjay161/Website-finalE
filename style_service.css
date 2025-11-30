@@ -1,0 +1,58 @@
+/* Container for cards */
+.services-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: nowrap;         /* horizontal layout sa desktop */
+}
+
+/* Card styling */
+.service-card {
+    width: 100%;
+    max-width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card image */
+.card-img {
+    height: 180px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f7f7f7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .services-wrapper {
+        flex-direction: column;     /* stack vertically sa mobile */
+        align-items: center;
+    }
+
+    .service-card {
+        max-width: 90%;
+    }
+}
+/* Fix navbar alignment on mobile */
+@media (max-width: 991px) {
+    .navbar-nav {
+      text-align: right !important; /* align items to the right */
+      width: 100%; /* ensure it fills the collapsed menu */
+    }
+    .navbar-nav .nav-item {
+      justify-content: flex-end; /* align links to right inside flex container */
+    }
+    .navbar-nav .nav-link {
+      text-align: right !important; /* links aligned right */
+    }
+  }
+  
